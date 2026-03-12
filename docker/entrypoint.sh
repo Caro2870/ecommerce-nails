@@ -36,6 +36,7 @@ php artisan migrate --force
 php artisan db:seed --force
 # Symlink relativo para que Caddy pueda resolver storage a través del volumen montado.
 php artisan storage:link --relative || true
+php artisan filament:assets --ansi 2>/dev/null || true
 
 chown -R www-data:www-data storage bootstrap/cache public || true
 
